@@ -2,7 +2,7 @@ global:
   ingress:
     enabled: true
     addReleaseNameToHost: none
-    defaultDomain: "dev-customerdirectory.nonp.aws3.uk.tsb"
+    defaultDomain: "localhost"
     defaultTlsSecret:
     annotations:
       alb.ingress.kubernetes.io/listen-ports: '[{"HTTP": 80},{"HTTPS": 443}]'
