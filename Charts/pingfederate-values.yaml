@@ -6,7 +6,6 @@ global:
     defaultTlsSecret:
     annotations:
       alb.ingress.kubernetes.io/listen-ports: '[{"HTTP": 80},{"HTTPS": 443}]'
-      alb.ingress.kubernetes.io/certificate-arn: arn:aws:acm:eu-west-2:337141981580:certificate/ecd6b533-5eea-4eb5-8505-e7c27d8d2d86
       alb.ingress.kubernetes.io/inbound-cidrs: 172.16.0.0/16
       alb.ingress.kubernetes.io/scheme: internal
       alb.ingress.kubernetes.io/backend-protocol: HTTPS
@@ -18,11 +17,11 @@ global:
 pingfederate-admin:
   enabled: true
   image:
-    repository: 337141981580.dkr.ecr.eu-west-2.amazonaws.com
-    name: tsb_sandbox1_ecr
-    tag: pingfederate_11.3.0-latest
+    repository: pingidentity/pingfederate
+    name: 12.2.0-alpine_3.21.2-al17-edge
+    tag: 12.2.0-alpine_3.21.2-al17-edge
   secretVolumes:
-    pingfederate-license:
+    pf-license:
       items:
         PingFederate-11.3-Development.lic: /opt/in/instance/server/default/conf/pingfederate.lic
   envs:
@@ -77,11 +76,11 @@ pingfederate-admin:
 pingfederate-engine:
   enabled: true
   image:
-    repository: 337141981580.dkr.ecr.eu-west-2.amazonaws.com
-    name: tsb_sandbox1_ecr
-    tag: pingfederate_11.3.0-latest
+    repository: pingidentity/pingfederate
+    name: 12.2.0-alpine_3.21.2-al17-edge
+    tag: 12.2.0-alpine_3.21.2-al17-edge
   secretVolumes:
-    pingfederate-license:
+    pf-license:
       items:
         PingFederate-11.3-Development.lic: /opt/in/instance/server/default/conf/pingfederate.lic
   workload:
