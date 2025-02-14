@@ -20,7 +20,7 @@ pingdirectory:
     SERVER_PROFILE_PATH: baseline/pingdirectory
     SERVER_PROFILE_URL: 'https://github.com/pingidentity/pingidentity-server-profiles.git'
   persistentvolume:
-    enabled: true
+    enabled: false
   secretVolumes:
     pingdirectory-license:
       items:
