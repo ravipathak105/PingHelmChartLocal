@@ -6,7 +6,7 @@ global:
     defaultTlsSecret:
     annotations:
       alb.ingress.kubernetes.io/listen-ports: '[{"HTTP": 80},{"HTTPS": 443}]'
-      alb.ingress.kubernetes.io/inbound-cidrs: 172.16.0.0/16
+      alb.ingress.kubernetes.io/inbound-cidrs: 0.0.0.0/32
       alb.ingress.kubernetes.io/scheme: internal
       alb.ingress.kubernetes.io/backend-protocol: HTTPS
       alb.ingress.kubernetes.io/target-type: ip
