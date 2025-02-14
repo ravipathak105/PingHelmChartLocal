@@ -18,9 +18,9 @@ global:
 pingfederate-admin:
   enabled: true
   image:
-    repository: TBD
-    name: tbd
-    tag: tbd
+    repository: pingidentity/pingfederate
+    name: 12.2.0-alpine_3.21.2-al17-edge
+    tag: 12.2.0-alpine_3.21.2-al17-edge
   secretVolumes:
     pingfederate-license:
       items:
@@ -77,9 +77,9 @@ pingfederate-admin:
 pingfederate-engine:
   enabled: true
   image:
-    repository: tbd
-    name: tbd
-    tag: tbd
+    repository: pingidentity/pingfederate
+    name: 12.2.0-alpine_3.21.2-al17-edge
+    tag: 12.2.0-alpine_3.21.2-al17-edge
   secretVolumes:
     pingfederate-license:
       items:
