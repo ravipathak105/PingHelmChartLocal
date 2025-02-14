@@ -17,8 +17,8 @@ global:
 pingfederate-admin:
   enabled: true
   image:
-    repository: pingidentity/pingfederate
-    name: 12.2.0-alpine_3.21.2-al17-edge
+    repository: pingidentity
+    name: pingfederate
     tag: 12.2.0-alpine_3.21.2-al17-edge
   secretVolumes:
     pf-license:
