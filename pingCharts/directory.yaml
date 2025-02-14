@@ -1,0 +1,33 @@
+pingdirectory:
+  enabled: true
+  image:
+    repository: tsbbuild.jfrog.io/pvs-docker-snapshot
+    name: ping-directory
+    tag: 1.0.8
+  container:
+    replicaCount: 3
+  workload:
+    type: StatefulSet
+    statefulSet:
+      persistentvolume:
+        enabled: true
+        volumes:
+          out-dir:
+            mountPath: /opt/out
+            persistentVolumeClaim:
+              accessModes:
+              - ReadWriteOnce
+              storageClassName: ping-gp3
+              resources:
+                requests:
+                  storage: 8Gi
+  envs:
+    PING_IDENTITY_ACCEPT_EULA: 'YES'
+    SERVER_PROFILE_PATH: baseline/pingdirectory
+    SERVER_PROFILE_URL: 'https://github.com/pingidentity/pingidentity-server-profiles.git'
+  persistentvolume:
+    enabled: true
+  secretVolumes:
+    pingdirectory-license:
+      items:
+        PingDirectory-9.3-Development.lic: /opt/in/pd.profile/server-root/pre-setup/PingDirectory.lic
