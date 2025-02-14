@@ -1,9 +1,9 @@
 pingdirectory:
   enabled: true
   image:
-    repository: tsbbuild.jfrog.io/pvs-docker-snapshot
-    name: ping-directory
-    tag: 1.0.8
+    repository: pingidentity
+    name: pingdirectory
+    tag: 10.2.0.0-alpine_3.21.2-al17-edge
   container:
     replicaCount: 3
   workload:
@@ -14,13 +14,7 @@ pingdirectory:
         volumes:
           out-dir:
             mountPath: /opt/out
-            persistentVolumeClaim:
-              accessModes:
-              - ReadWriteOnce
-              storageClassName: ping-gp3
-              resources:
-                requests:
-                  storage: 8Gi
+           
   envs:
     PING_IDENTITY_ACCEPT_EULA: 'YES'
     SERVER_PROFILE_PATH: baseline/pingdirectory
