@@ -1,0 +1,8 @@
+apiVersion: v2
+appVersion: "2401"
+description: Ping Identity helm charts - 02/05/2024
+home: https://helm.pingidentity.com/
+icon: https://helm.pingidentity.com/img/logos/ping.png
+name: ping-devops
+type: application
+version: 0.10.1

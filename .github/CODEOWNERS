@@ -1,0 +1,5 @@
+# The CODEOWNERS file itself can only be approved by @TSB-Code/PE-PR-Approvers
+.github/CODEOWNERS @TSB-Code/PE-PR-Approvers
+
+# All other files
+* @TSB-Code/PVS-OB-Infra-Write & @TSB-Code/Java-Chapter-Write
