@@ -17,7 +17,10 @@ global:
 
 pingfederate-admin:
   enabled: true
-  image: ${PING_IDENTITY_DEVOPS_REGISTRY:-docker.io/pingidentity}/pingfederate:${PING_IDENTITY_DEVOPS_TAG:-edge}
+  image:
+    repository: TBD
+    name: tbd
+    tag: tbd
   secretVolumes:
     pingfederate-license:
       items:
@@ -73,7 +76,10 @@ pingfederate-admin:
 
 pingfederate-engine:
   enabled: true
-  image: ${PING_IDENTITY_DEVOPS_REGISTRY:-docker.io/pingidentity}/pingfederate:${PING_IDENTITY_DEVOPS_TAG:-edge}
+  image:
+    repository: tbd
+    name: tbd
+    tag: tbd
   secretVolumes:
     pingfederate-license:
       items:
