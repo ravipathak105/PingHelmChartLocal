@@ -17,10 +17,7 @@ global:
 
 pingfederate-admin:
   enabled: true
-  image:
-    repository: 337141981580.dkr.ecr.eu-west-2.amazonaws.com
-    name: tsb_sandbox1_ecr
-    tag: pingfederate_11.3.0-latest
+  image: ${PING_IDENTITY_DEVOPS_REGISTRY:-docker.io/pingidentity}/pingfederate:${PING_IDENTITY_DEVOPS_TAG:-edge}
   secretVolumes:
     pingfederate-license:
       items:
@@ -76,10 +73,7 @@ pingfederate-admin:
 
 pingfederate-engine:
   enabled: true
-  image:
-    repository: 337141981580.dkr.ecr.eu-west-2.amazonaws.com
-    name: tsb_sandbox1_ecr
-    tag: pingfederate_11.3.0-latest
+  image: ${PING_IDENTITY_DEVOPS_REGISTRY:-docker.io/pingidentity}/pingfederate:${PING_IDENTITY_DEVOPS_TAG:-edge}
   secretVolumes:
     pingfederate-license:
       items:
