@@ -1695,7 +1695,7 @@ pingtoolkit:
     name: pingtoolkit
     repository: pingidentity
     repositoryFqn:
-    tag: "2401"
+    tag: "2411"
     pullPolicy: IfNotPresent
 
 #############################################################
