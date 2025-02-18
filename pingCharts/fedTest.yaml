@@ -21,7 +21,7 @@ pingfederate-admin:
   image:
     repository: pingidentity
     name: pingfederate
-    tag: 12.2.0-alpine_3.21.2-al17-edge
+    tag: 2411
   # imagePullSecrets:
   #   - name: jfrog-registry-secret
   secretVolumes:
@@ -65,7 +65,7 @@ pingfederate-engine:
   image:
     repository: pingidentity
     name: pingfederate
-    tag: 12.2.0-alpine_3.21.2-al17-edge
+    tag: 2411
   # imagePullSecrets:
   #   - name: jfrog-registry-secret
   secretVolumes:
