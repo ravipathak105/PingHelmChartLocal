@@ -1,0 +1,28 @@
+ARGO CD
+--------------------------
+kubectl create namespace argocd
+kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
+--------------------------------
+To access argocd UI
+--------------------------------
+kubectl get svc -n argocd
+kubectl port-forward svc/argocd-server -n argocd 8080:443  &    (& to run in background)
+https://localhost:8080/
+
+
+Access on UI
+Username : admin
+for password
+kubectl get secret -n argocd argocd-initial-admin-secret -o yaml
+take the password and decode base64
+echo "V1FqNFdleWhtWHA5amV5Zg==" |base64 -d
+
+Pass: WQj4WeyhmXp9jeyf
+
+
+Create kubernetes secret from file
+
+kubectl create secret generic pingdirectory-license --from-file=PingDirectory-9.3-Development.lic=PingDirectory.txt
+kubectl create secret generic pingfederate-license --from-file=PingFederate-12-Development.lic=PingFederate.txt
+
+kubectl get secret pingdirectory-license -o yaml (to get secret out (|base64 -d)
