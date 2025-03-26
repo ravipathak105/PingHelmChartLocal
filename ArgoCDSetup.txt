@@ -26,3 +26,5 @@ kubectl create secret generic pingdirectory-license --from-file=PingDirectory-9.
 kubectl create secret generic pingfederate-license --from-file=PingFederate-12-Development.lic=PingFederate.txt
 
 kubectl get secret pingdirectory-license -o yaml (to get secret out (|base64 -d)
+
+I'm changing this file content jfksjkfjkfllfjf
